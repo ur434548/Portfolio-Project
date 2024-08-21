@@ -1,5 +1,5 @@
 import React from "react";
-import loginpic from "../../assets/images/loginpic.png";
+import loginpic from "../assets/images/loginpic.png";
 
 function LoginPage() {
   return (

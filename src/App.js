@@ -1,11 +1,10 @@
-import "./App.css";
-import LoginPage from "./components/pages/LoginPage";
-function App() {
-  return (
-    <>
-      <LoginPage />
-    </>
-  );
-}
+import React from 'react'
+import Navbar from "../src/components/Navbar";
 
-export default App;
+export default function App() {
+  return (
+    <div>
+    <Navbar/>
+    </div>
+  )
+}
