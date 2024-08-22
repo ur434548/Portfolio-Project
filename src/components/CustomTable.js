@@ -1,59 +1,63 @@
-// src/CustomTable.js
 import React from "react";
-import { RiEditLine } from "react-icons/ri";
-import { FaRegEdit } from "react-icons/fa";
-import { MdDeleteOutline } from "react-icons/md";
 
-const CustomTable = ({ data, onClick, className }) => {
+import Button from "./Button";
+
+const CustomTable = ({
+  className,
+  data,
+
+  subtitle,
+  stack,
+  title,
+  action,
+  icons,
+}) => {
   return (
-    <div className="bg-gray-50 mt-16">
-        <h1>Projects</h1>
+    <div className="bg-white shadow-md rounded-2xl p-4 mx-3">
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl  uppercase font-bold py-5">Projects</h1>
+        <Button text="Add Projects" className="h-10 rounded-2xl " />
+      </div>
 
-    
-    <table className={` w-screen mt-20  rounded-l6 ${className}`}>
-      <thead className="bg-gray-50 p-10">
-        <tr>
-          <th className="px-6 py-3 text-left text-sm font-lg text-black bg-slate-100  tracking-wider">
-            Title
-          </th>
-          <th className="px-6 py-3 text-left text-sm font-lg text-black bg-slate-100  tracking-wider">
-            Stack
-          </th>
-          <th className="px-6 py-3 text-left text-sm font-lg text-black bg-slate-100  tracking-wider">
-            Subtitle
-          </th>
-          <th className="px-6 py-3 text-left text-sm font-lg text-black bg-slate-100  tracking-wider">
-            Actions
-          </th>
-        </tr>
-      </thead>
-      <tbody className="bg-white divide-y divide-gray-200">
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-500">
-              {item.title}
-            </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              {item.subtitle}
-            </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-              {item.stack}
-            </td>
-            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-              <button
-                onClick={() => onClick(item)}
-                className="text-indigo-600 flex gap-2"
-              >
-                <FaRegEdit size={17} />
-
-                <RiEditLine size={19} />
-                <MdDeleteOutline size={19} />
-              </button>
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+      <div className="overflow-x-auto">
+        <table className={`min-w-full bg-white ${className}`}>
+          <thead className="bg-gray-50">
+            <tr>
+              <th className="py-3 px-3 text-left text-xs sm:text-sm md:text-base font-lg text-black bg-slate-100 tracking-wider">
+                {subtitle}
+              </th>
+              <th className="py-3 px-3 text-left text-xs sm:text-sm md:text-base font-lg text-black bg-slate-100 tracking-wider">
+                {stack}
+              </th>
+              <th className="py-3 px-3 text-left text-xs sm:text-sm md:text-base font-lg text-black bg-slate-100 tracking-wider">
+                {title}
+              </th>
+              <th className="py-3 px-3 text-left text-xs sm:text-sm md:text-base font-lg text-black bg-slate-100 tracking-wider">
+                {action}
+              </th>
+            </tr>
+          </thead>
+          <tbody className="bg-white ">
+            {data.map((item) => (
+              <tr key={item.id}>
+                <td className="py-4 px-3  text-xs sm:text-sm md:text-base font-medium text-gray-500">
+                  {item.title}
+                </td>
+                <td className="py-4 px-3  text-xs sm:text-sm md:text-base text-gray-500">
+                  {item.subtitle}
+                </td>
+                <td className="py-4 px-3  text-xs sm:text-sm md:text-base text-gray-500">
+                  {item.stack}
+                </td>
+                <td className="py-4 px-3  text-xs sm:text-sm md:text-base font-medium text-indigo-600 flex gap-2">
+                  {item.icons}
+                </td>
+              </tr>
+              
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
