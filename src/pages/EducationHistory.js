@@ -2,7 +2,7 @@ import React from 'react'
 import CustomTable from '../components/CustomTable'
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
-export default function Experience() {
+export default function EducationHistory() {
     const data = [
         {
           id: 1,
@@ -11,34 +11,30 @@ export default function Experience() {
           thirdColVal: "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
           fourthColVal: "lorem ",
           fifthColVal: "lorem ",
-          sixColVal: "lorem ",
-
         },
       ];
       const icons = [<FaRegEdit key="edit" size={18} />,  <MdDeleteOutline key="delete" size={21}/>];
       const colWidths = {
-        title1: "10%",     
+        title1: "15%",     
         title2: "11%", 
-        title3: "36%",
-        title4: "25%",
-        title5: "6%",  
-        title6:"6%",
-        action: "6%",   
+        title3: "50%",
+        title4: "8%",
+        title5: "8%",     
+        action: "8%",   
       };
   return (
     <div>
       <CustomTable
-         data={data}
+        data={data}
         title1="Title"
-        title2="Company"
+        title2="Institute"
         title3="Description"
-        title4="Projects"
-        title5="From"
-        title6="To"
+        title4="From"
+        title5="To"
         action="Actions"
         icons={icons}
-        Buttontext="Add Experience"
-        tableHeading="Experience"
+        Buttontext="Add Educational History"
+        tableHeading="Educational History"
         colWidths={colWidths}
         showButton={true}
       />
