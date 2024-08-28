@@ -1,14 +1,15 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Projects from "../src/pages/Projects"
+import Projects from "../src/pages/Projects";
 import Dashboard from "../src/pages/Dashboard";
 import RootLayout from "./pages/RootLayout";
 import ErrorElement from "./pages/ErrorElement";
 import Skills from "./pages/Skills";
 import Messages from "./pages/Messages";
-import EducationHistory from "./pages/EducationHistory"
-import Experience from "./pages/Experience"
-import Reviews from "./pages/Reviews"
+import EducationHistory from "./pages/EducationHistory";
+import Experience from "./pages/Experience";
+import Reviews from "./pages/Reviews";
+import UpdateSkill from "./pages/UpdateSkill";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
         element: <Skills />,
       },
       {
+        path: "/Skills/Update-Skill",
+        element: <UpdateSkill />,
+      },
+
+      {
         path: "/Messages",
         element: <Messages />,
       },
@@ -37,7 +43,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/Experience",
-        element: <Experience/>
+        element: <Experience />,
       },
       {
         path: "/Reviews",
