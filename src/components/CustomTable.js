@@ -18,14 +18,16 @@ const CustomTable = ({
   tableHeading,
   colWidths,
   showButton,
+  onClick
 }) => {
   return (
-    <div className="bg-white shadow-md  rounded-2xl p-4 mx-3">
+    <div className="bg-white shadow-md  rounded-2xl p-4 mx-3 h-[50.6rem]">
       <div className="flex justify-between items-center flex-col md:flex-row  mb-2">
         <h1 className="text-2xl uppercase font-600 py-5">{tableHeading}</h1>
         {showButton ? (
           <Button
             text={Buttontext}
+            onClick={onClick}
             className="h-10 px-5 rounded-2xl mt-4 md:mt-0"
           />
         ) : (
@@ -35,7 +37,7 @@ const CustomTable = ({
 
       <div className="max-h-[707px] overflow-y-auto">
         <table className={`container bg-white ${className}`}>
-          <thead className="bg-slate-100 sticky top-0 font-semibold text-slate-700	">
+          <thead className="bg-slate-100 sticky top-0 font-normal	 text-slate-700	">
             <tr>
               <th
                 style={{ width: colWidths.title1 }}

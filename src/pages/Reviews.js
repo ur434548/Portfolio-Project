@@ -3,8 +3,16 @@ import CustomTable from "../components/CustomTable";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import navProfilePic from "../assets/images/navProfilePic.jpg";
+import { useNavigate } from 'react-router-dom'
 
 export default function Reviews() {
+  const navigate=useNavigate();
+  const handleClick=()=>{
+      navigate("Update-Reviews")
+  }
+
+
+
   const data = [
     {
       id: 1,
@@ -69,6 +77,7 @@ export default function Reviews() {
         title2="Review"
         action="Actions"
         icons={icons}
+        onClick={handleClick}
         Buttontext="Add Client Reviews"
         tableHeading="Client Reviews"
         colWidths={colWidths}

@@ -1,9 +1,15 @@
 import React from "react";
 import CustomTable from "../components/CustomTable";
+import { useNavigate } from "react-router-dom";
 import { RiEditLine } from "react-icons/ri";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 export default function Projects() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("Add-Project");
+  };
   const data = [
     {
       id: 1,
@@ -11,14 +17,17 @@ export default function Projects() {
       secondColVal: "Subtitle 1",
       thirdColVal: "Stack 1",
     },
-  
   ];
-  const icons = [<FaRegEdit key="edit" size={18} />, <RiEditLine key="editLine" size={20} />, <MdDeleteOutline key="delete" size={21}/>];
+  const icons = [
+    <FaRegEdit key="edit" size={18} />,
+    <RiEditLine key="editLine" size={20} />,
+    <MdDeleteOutline key="delete" size={21} />,
+  ];
   const colWidths = {
-    title1: "20%",     
-    title2: "40%", 
-    title3: "24%",     
-    action: "14%",   
+    title1: "20%",
+    title2: "40%",
+    title3: "24%",
+    action: "14%",
   };
 
   return (
@@ -34,6 +43,7 @@ export default function Projects() {
         tableHeading="Projects"
         colWidths={colWidths}
         showButton={true}
+        onClick={handleClick}
       />
     </div>
   );

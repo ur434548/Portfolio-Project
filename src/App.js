@@ -10,6 +10,10 @@ import EducationHistory from "./pages/EducationHistory";
 import Experience from "./pages/Experience";
 import Reviews from "./pages/Reviews";
 import UpdateSkill from "./pages/UpdateSkill";
+import UpdateEducationalHistory from "./pages/UpdateEducationalHistory";
+import UpdateExperience from "./pages/UpdateExperience";
+import UpdateClientReviews from "./pages/UpdateClientReviews";
+import AddProjects from "./pages/AddProjects";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "/Projects",
         element: <Projects />,
+      },
+      {
+        path: "/Projects/Add-Project",
+        element: <AddProjects />,
       },
       {
         path: "/Skills",
@@ -42,12 +50,24 @@ const router = createBrowserRouter([
         element: <EducationHistory />,
       },
       {
+        path: "/EducationHistory/Update-Educational-History",
+        element: <UpdateEducationalHistory />,
+      },
+      {
         path: "/Experience",
         element: <Experience />,
       },
       {
+        path: "/Experience/Update-Experience",
+        element: <UpdateExperience />,
+      },
+      {
         path: "/Reviews",
         element: <Reviews />,
+      },
+      {
+        path: "/Reviews/Update-Reviews",
+        element: <UpdateClientReviews />,
       },
     ],
   },

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Dashboard() {
   return (
-    <div className="bg-white p-2 mx-3  shadow-md rounded-2xl h-auto">
+    <div className="bg-white p-2 mx-3  shadow-md rounded-2xl h-[50.6rem]">
     <div className="container grid  gap-3 md:grid-cols-2 lg:grid-cols-4 mx-auto ">
       <div className="md:col-span-1 lg:col-span-3 p-1 rounded-2xl bg-white ">
         <div className="grid-rows-3 rounded-lg">
@@ -60,6 +60,11 @@ export default function Dashboard() {
         </div>
       </div>
     </div>
+
+
+
+
+    
   </div>
   )
 }

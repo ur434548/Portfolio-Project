@@ -2,7 +2,13 @@ import React from 'react'
 import CustomTable from '../components/CustomTable'
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 export default function EducationHistory() {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("Update-Educational-History");
+  };
     const data = [
         {
           id: 1,
@@ -37,6 +43,7 @@ export default function EducationHistory() {
         tableHeading="Educational History"
         colWidths={colWidths}
         showButton={true}
+        onClick={handleClick}
       />
     </div>
   )
