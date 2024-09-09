@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import CustomTable from "../components/CustomTable";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
@@ -8,8 +8,15 @@ export default function Experience() {
   const handleClick = () => {
     navigate("Update-Experience");
   };
+  const handleEdit = () => {
+    console.log("Edit icon clicked");
+  };
 
-  const data = [
+  const handleDelete = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setData(updatedData);
+  };
+  const [data, setData] = useState([
     {
       id: 1,
       firstColVal: "HTML",
@@ -20,11 +27,253 @@ export default function Experience() {
       fifthColVal: "lorem ",
       sixColVal: "lorem ",
     },
-  ];
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+    {
+      id: 1,
+      firstColVal: "HTML",
+      secondColVal: "80%",
+      thirdColVal:
+        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;",
+      fourthColVal: "lorem ",
+      fifthColVal: "lorem ",
+      sixColVal: "lorem ",
+    },
+  ]);
   const icons = [
-    <FaRegEdit key="edit" size={18} />,
-    <MdDeleteOutline key="delete" size={21} />,
+    { icon: <FaRegEdit size={18} />, onClick: handleEdit },
+   
+    { icon: <MdDeleteOutline size={21} />, onClick: handleDelete },
   ];
+
   const colWidths = {
     title1: "10%",
     title2: "11%",

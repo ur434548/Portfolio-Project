@@ -14,6 +14,7 @@ import UpdateEducationalHistory from "./pages/UpdateEducationalHistory";
 import UpdateExperience from "./pages/UpdateExperience";
 import UpdateClientReviews from "./pages/UpdateClientReviews";
 import AddProjects from "./pages/AddProjects";
+import "./App.css"
 const router = createBrowserRouter([
   {
     path: "/",

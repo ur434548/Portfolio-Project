@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import CustomTable from "../components/CustomTable";
 import { useNavigate } from "react-router-dom";
 import { RiEditLine } from "react-icons/ri";
@@ -10,19 +11,153 @@ export default function Projects() {
   const handleClick = () => {
     navigate("Add-Project");
   };
-  const data = [
+  const handleEdit = () => {
+    console.log("Edit icon clicked");
+  };
+
+  const handleEditLine = () => {
+    console.log("Edit Line icon clicked");
+  };
+
+  const handleDelete = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setData(updatedData);
+  };
+  const [data, setData] = useState([
     {
       id: 1,
       firstColVal: "Title 1",
       secondColVal: "Subtitle 1",
       thirdColVal: "Stack 1",
     },
-  ];
+    {
+      id: 2,
+      firstColVal: "Title 2",
+      secondColVal: "Subtitle 2",
+      thirdColVal: "Stack 2",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+  ]);
+
   const icons = [
-    <FaRegEdit key="edit" size={18} />,
-    <RiEditLine key="editLine" size={20} />,
-    <MdDeleteOutline key="delete" size={21} />,
+    { icon: <FaRegEdit size={18} />, onClick: handleEdit },
+    { icon: <RiEditLine size={20} />, onClick: handleEditLine },
+    { icon: <MdDeleteOutline size={21} />, onClick: handleDelete },
   ];
+
   const colWidths = {
     title1: "20%",
     title2: "40%",

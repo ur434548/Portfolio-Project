@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import CustomTable from "../components/CustomTable";
 import { FaRegEdit } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
@@ -9,18 +9,165 @@ export default function Skills() {
   const handleClick = () => {
     navigate("Update-Skill");
   };
-  const data = [
+  const handleEdit = () => {
+    console.log("Edit icon clicked");
+  };
+
+
+  const handleDelete = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setData(updatedData);
+  };
+  const [data, setData] = useState([
     {
       id: 1,
-      firstColVal: "HTML",
-      secondColVal: "80%",
-      thirdColVal:
-        "lorem jlhdfkljsdhyfwe89fbsdknmfhbsadfhyweadfsadkjfsadbufsgfsdfsdhfosdfsd.fhsdifo;sadfsadlf",
+      firstColVal: "Title 1",
+      secondColVal: "Subtitle 1",
+      thirdColVal: "Stack 1",
     },
-  ];
+    {
+      id: 2,
+      firstColVal: "Title 2",
+      secondColVal: "Subtitle 2",
+      thirdColVal: "Stack 2",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+  ]);
   const icons = [
-    <FaRegEdit key="edit" size={18} />,
-    <MdDeleteOutline key="delete" size={21} />,
+    { icon: <FaRegEdit size={18} />, onClick: handleEdit },
+    
+    { icon: <MdDeleteOutline size={21} />, onClick: handleDelete },
   ];
   const colWidths = {
     title1: "10%",

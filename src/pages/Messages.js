@@ -1,18 +1,262 @@
-import React from "react";
+import { useState } from "react";
 import CustomTable from "../components/CustomTable";
 import { MdDeleteOutline } from "react-icons/md";
 
 export default function Messages() {
-  const data = [
+ 
+
+  const handleDelete = (id) => {
+    const updatedData = data.filter((item) => item.id !== id);
+    setData(updatedData);
+  };
+  const [data, setData] = useState([
     {
       id: 1,
-      firstColVal: "Usman Rehman",
-      secondColVal: "03484649565",
-      thirdColVal: "Job for react Js",
-      fourthColVal: "Hello Usman, You are Shortlisted For React js post",
+      firstColVal: "Title 1",
+      secondColVal: "Subtitle 1",
+      thirdColVal: "Stack 1",
     },
+    {
+      id: 2,
+      firstColVal: "Title 2",
+      secondColVal: "Subtitle 2",
+      thirdColVal: "Stack 2",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+    {
+      id: 3,
+      firstColVal: "Title 3",
+      secondColVal: "Subtitle 3",
+      thirdColVal: "Stack 3",
+    },
+  ]);
+
+  const icons = [
+  
+    { icon: <MdDeleteOutline size={21} />, onClick: handleDelete },
   ];
-  const icons = [<MdDeleteOutline key="delete" size={21}  className="text-right"/>];
+
   const colWidths = {
     title1: "12%",
     title2: "12%",

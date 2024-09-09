@@ -41,7 +41,7 @@ const Navbar = () => {
           </div>
 
           <div
-            className={`hidden md:flex justify-end gap-5 text-[13px] items-center col-span-3 lg:text-[16px] `}
+            className={`hidden md:flex justify-end gap-4 text-[13px] items-center col-span-3 lg:text-[16px] `}
           >
             <Link
               to="/Dashboard"
@@ -108,13 +108,14 @@ const Navbar = () => {
             >
               Reviews
             </Link>
-
-            <img
-              src={navProfilePic}
-              alt="User profile"
-              className="rounded-full h-10 w-10 col-span-2"
-            />
-            <IoChevronDownOutline />
+            <div className="flex gap-2 flex-row items-center content-center">
+              <img
+                src={navProfilePic}
+                alt="User profile"
+                className="rounded-full h-10 w-10 col-span-1"
+              />
+              <IoChevronDownOutline />
+            </div>
           </div>
         </div>
         {/* Mobile */}
